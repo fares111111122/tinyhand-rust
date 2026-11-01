@@ -1,0 +1,23 @@
+[package]
+name = "tinyhand"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "A tiny hand on a stick for Windows, macOS and Linux"
+
+[dependencies]
+eframe = { version = "0.33", default-features = false, features = ["glow", "x11", "default_fonts", "persistence", "accesskit"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+global-hotkey = "0.7"
+tray-icon = "0.21"
+# Enumerating bounds needs no AppKit; 0.5 enables its entire API by default.
+display-info = "=0.4.8"
+rodio = { version = "0.20", default-features = false, features = ["wav"] }
+serde = { version = "1", features = ["derive"] }
+
+[build-dependencies]
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[target.'cfg(target_os = "linux")'.dependencies]
+gtk = "0.18"
+

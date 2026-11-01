@@ -5,3 +5,5 @@ dist/
 *.dmg
 *.zip
 assets/unused/
+/target/
+/rust/target/
