@@ -36,7 +36,7 @@ Build a macOS app bundle:
 open dist/TinyHand.app
 ```
 
-The bundle is ad-hoc signed for local use, without Developer ID signing or notarization. Windows/Linux CI produces portable archives; Linux still needs the runtime libraries corresponding to the packages above. No release is published automatically.
+The bundle is ad-hoc signed for local use, without Developer ID signing or notarization. Windows/Linux CI produces portable archives. Windows CI links the Microsoft C runtime statically to avoid a separate Visual C++ Redistributable requirement; Linux still needs the runtime libraries corresponding to the packages above. No release is published automatically.
 
 ## Use
 
